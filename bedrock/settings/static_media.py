@@ -408,9 +408,7 @@ PIPELINE_CSS = {
     'firefox_new': {
         'source_filenames': (
             'css/sandstone/sandstone-resp.less',
-            'css/firefox/template-resp.less',
             'css/tabzilla/tabzilla-static.less',
-            'css/libs/socialshare/socialshare.less',
             'css/firefox/simple_footer-resp.less',
             'css/firefox/new.less',
         ),
@@ -1132,15 +1130,12 @@ PIPELINE_JS = {
     'firefox_new': {
         'source_filenames': (
             'js/libs/jquery-1.11.3.min.js',
-            'js/libs/spin.min.js',
             'js/base/global.js',
             'js/base/global-init.js',
             'js/base/search-params.js',
             'js/newsletter/form.js',
             'js/base/mozilla-input-placeholder.js',
             'js/base/mozilla-image-helper.js',
-            'js/libs/socialshare.min.js',
-            'js/libs/modernizr.custom.csstransitions.js',
             'js/firefox/new.js',
         ),
         'output_filename': 'js/firefox_new-bundle.js',
