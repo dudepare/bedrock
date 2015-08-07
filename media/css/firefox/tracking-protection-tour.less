@@ -51,7 +51,7 @@ body {
         border: 2px dashed #70be4a;
 
         &.fade-out {
-            .animation(fade-out 0.7s ease-in 0s 1 normal both);
+            animation: fade-out 0.7s ease-in 0s 1 normal forwards;
         }
     }
 
@@ -123,16 +123,15 @@ main > header {
 #info-panel {
     position: absolute;
     top: 0;
-    left: -320px;
-    background: #fff;
+    left: -310px;
+    background: #fafafa;
     border-radius: 3px;
     border: 1px solid #aaa;
-    box-shadow: 0 5px 10px rgba(68, 68, 68, 0.7);
+    filter: drop-shadow(0 5px 7px rgba(68, 68, 68, 0.7));
     box-sizing: border-box;
     cursor: default;
     width: 300px;
     z-index: 100;
-    overflow: hidden;
     -moz-user-select: none;
 
     header {
@@ -171,6 +170,23 @@ main > header {
         &:focus {
             background-color: #6bac44;
         }
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    &:before {
+        content: '';
+        top: 20px;
+        right: -20px;
+        border: 10px solid transparent;
+	    border-left-color: #fff;
+        z-index: 2;
     }
 }
 
