@@ -51,7 +51,7 @@ body {
         border: 2px dashed #70be4a;
 
         &.fade-out {
-            animation: fade-out 0.7s ease-in 0s 1 normal forwards;
+            animation: fade-out 1s ease-in 0s 1 normal forwards;
         }
     }
 
@@ -158,7 +158,7 @@ main > header {
 
     button {
         .font-size(13px);
-        background-color: #6CC042;
+        background-color: #6cc042;
         border-radius: 5px;
         border: 1px solid #c0c0c0;
         color: #fff;
@@ -185,8 +185,17 @@ main > header {
         top: 20px;
         right: -20px;
         border: 10px solid transparent;
-	    border-left-color: #fff;
+	    border-left-color: #fafafa;
         z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        top: 19px;
+        right: -22px;
+        border: 11px solid transparent;
+	    border-left-color: #aaa;
+        z-index: 1;
     }
 }
 
