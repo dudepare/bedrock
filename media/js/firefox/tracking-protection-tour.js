@@ -38,6 +38,7 @@ if (typeof Mozilla === 'undefined') {
 
     TPTour.step2 = function() {
         $step2Panel.removeClass('hidden');
+        $('.ad').addClass('fade-out');
     };
 
     TPTour.step3 = function() {

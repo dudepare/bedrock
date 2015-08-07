@@ -37,7 +37,7 @@ body {
     .secondary-col {
         float: right;
         width: 340px;
-        
+
         aside,
         .ad {
             height: 200px;
@@ -45,11 +45,14 @@ body {
     }
 
     .ad {
-        position: relative;
         height: 100px;
         margin-bottom: @baseLine;
         background-color: #dbecd2;
         border: 2px dashed #70be4a;
+
+        &.fade-out {
+            .animation(fade-out 0.7s ease-in 0s 1 normal both);
+        }
     }
 
     article,
@@ -113,23 +116,27 @@ main > header {
     }
 }
 
+.ad-container {
+    position: relative;
+}
+
 #info-panel {
     position: absolute;
     top: 0;
     left: -320px;
-    -moz-user-select: none;
     background: #fff;
     border-radius: 3px;
     border: 1px solid #aaa;
-    box-shadow: 0 5px 10px rgba(68, 68, 68, 0.5);
-    .border-box();
+    box-shadow: 0 5px 10px rgba(68, 68, 68, 0.7);
+    box-sizing: border-box;
     cursor: default;
     width: 300px;
     z-index: 100;
     overflow: hidden;
+    -moz-user-select: none;
 
     header {
-        padding: 10px;
+        padding: 15px;
     }
 
     h2 {
@@ -142,18 +149,36 @@ main > header {
     }
 
     footer {
-        border-top: 1px solid #aaa;
-        background-color: rgb(240,240,240);
+        .font-size(13px);
+        border-top: 1px solid #cbcccc;
+        background-color: #f0f0f0;
         color: rgb(179,177,179);
-        padding: @baseLine @gridGutterWidth;
+        padding: @baseLine 30px;
         text-align: right;
     }
 
     button {
-        background-color: rgb(108,192,66);
+        .font-size(13px);
+        background-color: #6CC042;
         border-radius: 5px;
-        border: 1px solid #aaa;
+        border: 1px solid #c0c0c0;
         color: #fff;
-        padding: 5px;
+        padding: 5px 2.5em;
+        margin-left: 30px;
+        transition: background-color .1s ease-in-out;
+
+        &:hover,
+        &:focus {
+            background-color: #6bac44;
+        }
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
